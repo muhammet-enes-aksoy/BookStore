@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApi.AddControllers{
+namespace WebApi.AddControllers;
     [ApiController]
     [Route("[controller]s")]
     public class BookController : ControllerBase{
@@ -30,4 +30,3 @@ namespace WebApi.AddControllers{
             return bookList;
         }
     }
-}

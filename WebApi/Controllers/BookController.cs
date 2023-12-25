@@ -29,4 +29,9 @@ namespace WebApi.AddControllers;
             var bookList = BookList.OrderBy(x=> x.Id).ToList<Book>();
             return bookList;
         }
+        [HttpGet("{id}")]
+        public Book GetById(int id){
+            var book = BookList.Where(book=> book.Id == id).SingleOrDefault();
+            return book;
+        }
     }

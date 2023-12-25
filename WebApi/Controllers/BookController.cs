@@ -9,19 +9,22 @@ namespace WebApi.AddControllers;
                 Id = 1,
                 Title = "aaa",
                 GenreId = 1001,
-                PageCount = 300
+                PageCount = 300,
+                PublishDate = new DateTime(2020,05,21)
             },
             new Book{
                 Id = 2,
                 Title = "bbb",
                 GenreId = 1002,
-                PageCount = 250
+                PageCount = 250,
+                PublishDate =new DateTime(2001,08,25)
             },
             new Book{
                 Id = 3,
                 Title = "ccc",
                 GenreId = 1001,
-                PageCount = 500
+                PageCount = 500,
+                PublishDate = new DateTime(2010,05,21)
             }
         };
 
@@ -54,6 +57,7 @@ namespace WebApi.AddControllers;
             book.GenreId = updateBook.GenreId != default ? updateBook.GenreId : book.GenreId;
             book.PageCount = updateBook.PageCount != default ? updateBook.PageCount : book.PageCount;
             book.Title = updateBook.Title != default ? updateBook.Title : book.Title;
+            book.PublishDate = updateBook.PublishDate != default ? updateBook.PublishDate : book.PublishDate;
             return Ok(); 
         }
     }
